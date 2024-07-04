@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yugesh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Animation for section headers */
+        .section h2, .section h3 {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .section.show h2, .section.show h3 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation for list items */
+        .section ul li {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .section.show ul li {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yugesh</h1>
+            <p>AI Developer</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects, skills, and experience in AI development.</p>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>An AI developer with high problem-solving skills and the ability to develop complex projects. Proficient in IoT devices and has built projects used by a widespread of people. Developed a highly scalable IoT system used in our college. Always ready to learn new technology and tools.</p>
+        </div>
+    </section>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Sentiment Analysis</h3>
+                <p>The Sentiment Analysis of YouTube Comments project aims to analyze user comments on YouTube videos to determine the overall sentiment (positive, negative, or neutral) expressed in the comments. This project leverages natural language processing (NLP) and machine learning techniques to automate the sentiment analysis process, providing valuable insights into audience feedback and engagement.</p>
+            </div>
+            <div class="project">
+                <h3>Automatic Number Plate Recognition (ANPR)</h3>
+                <p>The Automatic Number Plate Detection (ANPD) project focuses on developing a system that can automatically detect and recognize vehicle license plates from images or video streams. This technology has numerous applications, including traffic monitoring, law enforcement, toll collection, and parking management. The project leverages computer vision and optical character recognition (OCR) techniques to identify and extract the number plate information from vehicles efficiently.</p>
+            </div>
+            <div class="project">
+                <h3>Home Automation IoT System</h3>
+                <p>The IoT-Based Smart Home Automation project aims to provide seamless control of household appliances using smartphones. This system leverages Internet of Things (IoT) technology to connect various devices and appliances to a central hub, allowing users to control them remotely through a smartphone application. The project employs Arduino microcontrollers and is programmed using C language to manage the communication between the devices and the smartphone.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>Computer Vision</li>
+                <li>Natural Language Processing</li>
+                <li>Data Analytics</li>
+            </ul>
+            
+            <h3>Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQL</li>
+            </ul>
+            
+            <h3>Tools</h3>
+            <ul>
+                <li>PowerBI</li>
+                <li>MySQL</li>
+                <li>TensorFlow</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Linux</li>
+                <li>VSCode</li>
+                <li>Google Colab</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:yk7858794@gmail.com">yk7858794@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919588720563">+91 9588720563</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yugesh9588">Yugesh's LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/yugesh-111">Yugesh's GitHub</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yugesh. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script>
+        // JavaScript to trigger animations when sections are in view
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const scrollPos = window.scrollY;
+                
+                if (scrollPos >= sectionTop - sectionHeight / 3) {
+                    section.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
